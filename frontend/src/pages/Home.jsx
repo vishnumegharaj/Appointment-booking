@@ -3,13 +3,17 @@ import { ArrowRight, Calendar, Shield, Clock, Star } from "lucide-react"
 import groupProfiles from "../assets/group_profiles.png";
 import headerImg from "../assets/header_img.png";
 import { specialityData } from "../assets/assets";
-import { useContext } from "react";
+import { useEffect , useContext } from "react";
 import { AppContext } from "../context/AppContext";
+import axios from 'axios';
+import DoctorUploader from "./DoctorUpload";
 
 const Home = () => {
-  const {doctors} = useContext(AppContext);
+  const { doctors } = useContext(AppContext);
+
   return (
     <div>
+      {/* <DoctorUploader /> */}
       {/* Hero Section */}
       <section className="relative bg-gradient-to-r from-teal-500 to-emerald-600 overflow-hidden">
         <div className="absolute inset-0 bg-[url('/placeholder.svg?height=800&width=1600')] opacity-10 bg-center bg-cover"></div>
